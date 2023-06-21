@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:scaleType="centerCrop" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/txtFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="Lionel Messi" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            tools:text="email" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:src="@drawable/ic_edit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType=""
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/phoneNumber"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edtGender"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType=""
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/birthday"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edtBirthday"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType=""
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:autofillHints=""
+            android:layout_marginTop="10dp"
+            android:inputType=""
+            android:background="@drawable/editaddress_border"
+            tools:ignore="LabelFor,VisualLintTextFieldSize"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

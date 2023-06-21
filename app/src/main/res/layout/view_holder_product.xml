@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="106dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="79dp"
+            android:layout_height="88dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_fe_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:text="Phnom Penh" />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    tools:text="10$" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_detail"/>
+
+</LinearLayout>
