@@ -8,7 +8,7 @@ public class Product {
     private String sku;
     private String name;
     private String description;
-    private int price;
+    private double price;
     @SerializedName("image-url")
     private String imageUrl;
 
@@ -46,11 +46,11 @@ public class Product {
         this.description = description;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

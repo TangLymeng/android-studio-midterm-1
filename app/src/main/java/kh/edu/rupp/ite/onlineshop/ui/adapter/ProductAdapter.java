@@ -58,7 +58,7 @@ public class ProductAdapter extends ListAdapter<Product, ProductAdapter.ProductV
             Picasso.get().load(product.getImageUrl()).into(itemBinding.imgProduct);
             itemBinding.txtName.setText(product.getName());
 
-            int price = product.getPrice();
+            double price = product.getPrice();
             String priceText = "$" + price;
             itemBinding.txtPrice.setText(priceText);
 
