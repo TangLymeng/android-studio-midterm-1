@@ -3,6 +3,9 @@ package kh.edu.rupp.ite.onlineshop.ui.fragment;
 
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.squareup.picasso.Picasso;
 
-import kh.edu.rupp.ite.onlineshop.CircleTransform;
 import kh.edu.rupp.ite.onlineshop.api.model.Profile;
 import kh.edu.rupp.ite.onlineshop.api.service.ApiService;
 import kh.edu.rupp.ite.onlineshop.databinding.FragmentProfileBinding;
@@ -43,7 +44,7 @@ public class ProfileFragment extends Fragment {
 
         // create retrofit client
         Retrofit httpClient = new Retrofit.Builder()
-                .baseUrl("https://ferupp.s3.ap-southeast-1.amazonaws.com/")
+                .baseUrl("https://raw.githubusercontent.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -72,10 +73,12 @@ public class ProfileFragment extends Fragment {
                 binding.edtBirthday.setText(profile.getBirthday());
                 binding.edtAddress.setText(profile.getAddress());
 
-                // Load and display the profile image using a library like Picasso or Glide
-                Picasso.get().load(profile.getImageUrl())
-                            .transform(new CircleTransform()) // Apply circular transformation
-                            .into(binding.imgProfile);
+                // Load and display the profile image using a library like Glide
+
+                Glide.with(requireContext())
+                        .load(profile.getImageUrl())
+                        .apply(RequestOptions.bitmapTransform(new CircleCrop()))
+                        .into(binding.imgProfile);
             }
 
             @Override

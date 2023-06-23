@@ -147,6 +147,7 @@
             android:autofillHints=""
             android:layout_marginTop="10dp"
             android:inputType=""
+            android:padding="8dp"
             android:background="@drawable/editaddress_border"
             tools:ignore="LabelFor,VisualLintTextFieldSize"/>
 
